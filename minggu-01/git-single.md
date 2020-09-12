@@ -1,4 +1,13 @@
 Ikhwan@DESKTOP-RN4MJOC MINGW64 ~/tekn-cloud-computing (master)
+$ git clone https://github.com/nikhwanbs/tekn-cloud-computing
+Cloning into 'tekn-cloud-computing'...
+remote: Enumerating objects: 34, done.
+remote: Counting objects: 100% (34/34), done.
+remote: Compressing objects: 100% (26/26), done.
+remote: Total 34 (delta 2), reused 20 (delta 0), pack-reused 0
+Unpacking objects: 100% (34/34), 8.93 KiB | 106.00 KiB/s, done.
+
+Ikhwan@DESKTOP-RN4MJOC MINGW64 ~/tekn-cloud-computing (master)
 $ vim README.md
 
 Ikhwan@DESKTOP-RN4MJOC MINGW64 ~/tekn-cloud-computing (master)
