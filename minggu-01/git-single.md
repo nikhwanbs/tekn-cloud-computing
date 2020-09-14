@@ -26,7 +26,7 @@ Setiap orang yang telah mempunyai account di GitHub bisa membuat repo dengan. Se
 <li>Buat repo kosong di GitHub, bisa public maupun private.</li>
 <li>Cloe repo kosong tersebut di komputer lokal</li>
 <li>Perintah berikutnya terkait dengan perubahan repo serta sinkronisasi antara GitHub dengan lokal.</li>
-
+</ol>
 <h2>Membuat Repo</h2>
 
 Untuk membuat repo, gunakan langkah-langkan berikut:
@@ -64,7 +64,8 @@ Perubahan isi bisa terjadi karena satu atau kombinasi beberapa hal berikut:
 <li>File diedit</li>
 <li>Membuat file / direktori baru</li>
 <li>Menghapus direktori</li>
-Untuk kasus-kasus tersebut, lakukan perubahan di komputer lokal, setelah itu push ke repo.
+</ol>
+Untuk kasus-kasus tersebut, lakukan perubahan di komputer lokal, setelah itu push ke repo.<br>
 
 <img src=gambar/Screenshot_8.png>
 <img src=gambar/Screenshot_9.png>
