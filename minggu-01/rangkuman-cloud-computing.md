@@ -1,6 +1,7 @@
 <h1>Cloud Computing</h1><b4>
 Cloud computing adalah ketersediaan sumber daya sistem komputer sesuai permintaan, terutama penyimpanan data (penyimpanan cloud) dan daya komputasi, tanpa pengelolaan aktif langsung oleh pengguna. Istilah ini umumnya digunakan untuk menggambarkan pusat data yang tersedia bagi banyak pengguna melalui Internet.
 Para pendukung cloud publik dan hybrid mencatat bahwa komputasi cloud memungkinkan perusahaan untuk menghindari atau meminimalkan biaya infrastruktur TI. Para pendukung juga mengklaim bahwa komputasi cloud memungkinkan perusahaan untuk menjalankan aplikasi mereka dan berjalan lebih cepat, dengan pengelolaan yang lebih baik dan lebih sedikit pemeliharaan, dan memungkinkan tim TI untuk lebih cepat menyesuaikan sumber daya untuk memenuhi permintaan yang berfluktuasi dan tidak dapat diprediksi. 
+<img src=gambar/meta.png>
 Cloud computing metaphor: sekelompok elemen jaringan yang menyediakan layanan tidak perlu ditangani atau dikelola secara individual oleh pengguna
 
 <h2>A.	Karakteristik Penting :</h2>
