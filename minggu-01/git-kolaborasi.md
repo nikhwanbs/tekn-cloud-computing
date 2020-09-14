@@ -14,10 +14,10 @@ Kontributor harus mem-fork repo upstream author sehingga di repo kontributor mun
 <li>Pada sisi kanan atas, klik Fork:</li>
 </ol>
 <img src=gambar/klikfork.png>
-<li>Setelah proses, repo dari upstream author sudah berada di account GitHub kita (kontributor)</li>
+Setelah proses, repo dari upstream author sudah berada di account GitHub kita (kontributor)
 <img src=gambar/kontributor.png>
 Setelah proses tersebut, clone di komputer lokal:
-<img src=gambar/git-kolab.png>
+<img src=gambar/clone-kolab.png>
 
 Setelah itu, konfigurasikan repo lokal kontributor. Pada kondisi saat ini, di komputer lokal sudah terdapat repo playground-1 yang berada pada direktori dengan nama yang sama. Untuk keperluan berkontribusi, ada 2 nama repo yang harus diatur:
 <ol>
