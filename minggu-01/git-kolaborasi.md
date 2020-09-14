@@ -41,7 +41,7 @@ Setiap kali melakukan perubahan, kirim perubahan tersebut. Pengiriman ini disebu
 <li>Upstream author me-review dan kemudian menyetujui (merge) ke master atau menolak PR.</li>
 <li>Jika disetujui dan di-merge ke repo master dari upstream author, sinkronkan repo di komputer lokal dan repo GitHub kontributor.</li>
 Berikut ini adalah contoh pengiriman perubahan isi README.md dengan menambahkan kontributor.
-
+</ol>
 <h3>Membuat Perubahan di Repo Lokal</h3>
 Sebelum melakukan perubahan, pastikan:
 <ol>
@@ -68,7 +68,7 @@ Sebelum melakukan perubahan, pastikan:
 <li>Pada repo upstream author, muncul angka 1 (artinya jumlahnya 1) pada Pull requests di bagian atas.</li>
 <li>Upstream author bisa menyetujui setelah melakukan review: klik pada Pull requests, akan muncul PR dengan message seperti yang ditulis oleh kontributor (Add: contributor). Klik pada PR tersebut, review kemudian klik Merge pull request diikuti dengan Confirm merge. Setelah itu, status akan berubah menjadi Merged.</li>
 <li>Sinkronkan semua repo (lokal maupun GitHub kontributor)</li>
-
+</ol>
 <img src=gambar/final.png>
 
 <h2>Konflik</h2>
