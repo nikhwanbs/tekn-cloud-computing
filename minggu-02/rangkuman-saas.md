@@ -1,7 +1,7 @@
 <h1>Apa Perbedaan antara Iaas, Saas, dan Paas?</h1>
 <p><b>IaaS PaaS & SaaS</b> adalah tiga model komputasi Cloud yang populer di pasar. Bergantung pada kebutuhan, pengguna dapat memilih salah satu dari tiga model. Di sini telah dijelaskan model IaaS, PaaS & SaaS dengan cara sebaik mungkin.
 </p>
-<img src=1.png>
+<img src=img/1.png>
 <h3>Apa itu IaaS? (Infra as a service)</h3>
 IaaS menyediakan infrastruktur seperti mesin virtual dan sumber daya lain seperti virtual-machine disk image library, penyimpanan berbasis blok dan file, firewall, load balances, alamat IP, jaringan area lokal virtual, dll. Infrastruktur sebagai layanan atau IaaS adalah lapisan dasar di model komputasi cloud. <br>
 <b>Lebih lanjut IaaS</b> dianalogikan dengan membeli furnitur dari Walmart. Anda diberikan semua bahan, Anda perlu membuatnya sendiri. yaitu, Anda diberikan komputer tanpa OS di atasnya, dan Anda dapat menginstal OS dan semua perangkat lunak di atasnya seperti yang Anda inginkan. Contoh umumnya: DigitalOcean, Linode, Rackspace, Amazon Web Services (AWS), Cisco Metapod, Microsoft Azure, Google Compute Engine (GCE) adalah beberapa contoh IaaS populer.
@@ -18,11 +18,11 @@ Lebih lanjut, Ini seperti meminjam buku referensi dari perpustakaan. Anda pergi,
 <br>
 Contoh umum : Google Apps, Microsoft office365, Google docs, Gmail, WHMCS billing software
 <h2>Perbedaan antara IaaS PaaS & SaaS</h2>
-<img src=2.png>
+<img src=img/2.png>
 (reference:(refenrence: https://www.quora.com/What-is-the-difference-between-IaaS-SaaS-and-Paas))
 <br>
 <h1>SAAS (Software as a Service) Platform Architecture</h1>
-<img src=3.png>
+<img src=img/3.png>
 Software as a service adalah lisensi perangkat lunak dan model pengiriman di mana perangkat lunak dilisensikan berdasarkan langganan dan dihosting secara terpusat. Pengguna dapat mengaksesnya dengan bantuan browser web.
 <br>
 SaaS adalah model pengiriman umum untuk banyak aplikasi bisnis, termasuk perangkat lunak perkantoran dan perpesanan, perangkat lunak manajemen, virtualisasi, dll. Ini adalah bagian dari nomenklatur komputasi awan, bersama dengan infrastructure as a service(IaaS), platform as a service(PaaS), desktop as a service(DaaS).
@@ -40,14 +40,14 @@ Ada dua jenis utama SaaS:
 <li>SaaS Horisontal</li>
 <li>Produk yang berfokus pada kategori perangkat lunak (pemasaran, penjualan, alat pengembang, SDM) tetapi bersifat agnostik industri.</li>
 </ul>
-<img src=4.png>
+<img src=img/4.png>
 <h3>Benefit of SAAS:</h3>
 Ini menawarkan peluang besar bagi organisasi dari semua ukuran untuk menggeser risiko akuisisi perangkat lunak, dan untuk memindahkan TI dari pusat biaya reaktif menjadi bagian perusahaan yang proaktif dan menghasilkan nilai. Aplikasi SaaS tidak memerlukan penerapan infrastruktur besar di lokasi klien. Ini menghilangkan atau secara drastis mengurangi komitmen sumber daya di muka.
 <br>
 Integrasi dapat direncanakan dan dijalankan dengan sedikit usaha, menciptakan salah satu interval waktu-ke-nilai sesingkat mungkin untuk investasi TI yang besar. Hal ini juga memungkinkan sejumlah vendor SaaS untuk menawarkan "uji coba" perangkat lunak bebas risiko (dan seringkali benar-benar gratis) untuk periode terbatas, seperti 30 hari. Memberi pelanggan kesempatan untuk mencoba perangkat lunak sebelum mereka membelinya membantu menghilangkan banyak risiko seputar pembelian perangkat lunak.
 
 <h3>Disadvantages of a SaaS Platform</h3>
-<img src=5.png>
+<img src=img/5.png>
 <ul>
 <li>Kurang kontrol</li>
 Karena aplikasi SaaS dihosting di server web vendor, Anda memiliki sedikit atau tidak ada kontrol atas perangkat lunak yang Anda gunakan. Aplikasi in-house atau on-premise akan memberi bisnis Anda lebih banyak kendali atas perilakunya, misalnya, aplikasi berbasis Windows mungkin memiliki lebih banyak opsi konfigurasi daripada aplikasi web biasa yang dikirimkan sebagai aplikasi SaaS.
