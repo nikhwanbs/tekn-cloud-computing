@@ -68,3 +68,47 @@ Perusahaan sebaiknya mempertimbangkan fleksibilitas dan implikasi manajemen risi
 (reference: https://hackernoon.com/saas-software-as-a-service-platform-architecture-757a432270f5)
 
 <h1>Cara membangun aplikasi SaaS berbasis cloud</h1>
+Bagaimana cara memulainya?
+<br>
+Bahasa pemrograman apa, database apa, perangkat lunak apa yang harus Anda pilih? Ada banyak pertanyaan yang perlu dijawab. Oleh karena itu, saya mencoba untuk fokus pada hal yang paling penting.
+<h3>Memilih bahasa pemrograman</h3>
+Membangun produk untuk cloud berarti membangun produk dengan bahasa pemrograman modern.
+Selain kemampuan dan keterampilan pribadi, pilihan bahasa pemrograman Anda akan dipengaruhi oleh kemungkinan setiap bahasa.
+Python adalah bahasa pemrograman yang banyak digunakan, dirancang untuk menekankan pada keterbacaan kodenya.
+Python dapat melakukan banyak hal. Apa pun aplikasi web yang ingin Anda buat, kemungkinan besar ada kerangka kerja untuk itu dengan Python.
+<h3>Memilih Database </h3>
+Jadi, salah satu hal pertama dalam daftar Anda akan mencakup penginstalan database. Kami merekomendasikan penggunaan database berorientasi dokumen. Database dokumen sangat berbeda dengan konsep tradisional database relasional.
+<h3>Kenapa memilih sebuah database document-oriented?</h3>
+Database dokumen mendapatkan informasi tipenya dari data itu sendiri. Jadi setiap contoh data dapat berbeda dari yang lain.
+Ini memungkinkan lebih banyak fleksibilitas, terutama saat menghadapi perubahan. Dan itu sering kali mengurangi ukuran database.
+Singkatnya, konsep DOB menawarkan pengalaman yang lebih kaya dengan teknik pemrograman modern.
+<h3>MongoDB </h3>
+MongoDB adalah database berorientasi dokumen yang memberikan kinerja tinggi, ketersediaan tinggi, dan skalabilitas mudah, Skalabilitas adalah faktor terpenting bagi kami sebagai bisnis SaaS global.
+Banyak pendiri SaaS bertujuan untuk meningkatkan bisnis mereka. Selain menskalakan produk Anda dari perspektif bisnis, Anda tidak boleh melupakan masalah teknisnya.
+Menskalakan teknologi Anda dengan MongoDB cukup mudah. Dengan sharding otomatis, Anda dapat mendistribusikan data ke berbagai mesin.
+Sharding adalah metode untuk menyimpan data Anda di beberapa mesin. Dan MongoDB menggunakan sharding untuk mendukung penerapan dengan kumpulan data besar.
+<img src=img/6.png>
+<h3>Queuing system (Sistem Antrian)</h3>
+Mari kita bicarakan tentang sistem antrian sekarang.
+Sistem antrian pesan adalah protokol komunikasi asinkron, yang memungkinkan pengirim dan penerima pesan tidak berinteraksi pada waktu yang sama.
+Juga dikenal sebagai teknologi Antrian Pesan (MSMQ), ini memungkinkan aplikasi web untuk berjalan pada waktu yang berbeda dan untuk berkomunikasi dengan berbagai integrasi pihak ketiga / API / dan layanan lainnya secara asinkron.
+<img src=img/7.png>
+Sebuah pesan (misalnya kueri yang meminta layanan pihak ketiga melalui API) ditempatkan ke antrean. Itu disimpan di sana sampai penerima mengambilnya.<br>
+Antrian pesan memiliki batasan terkait ukuran dan jumlah data yang dikirimkan dalam antrian. Hal terbaik tentang sistem antrian modern adalah sistem ini dapat diskalakan dengan mudah.
+<h3>RabbitMQ</h3>
+RabbitMQ adalah sistem antrian open source yang berjalan di semua sistem operasi utama.
+<h3>AWS & EC2</h3>
+AWS memungkinkan Anda untuk menghosting dan menjalankan aplikasi web Anda serta melakukan pekerjaan batch berkinerja tinggi yang sangat besar. Dengan Elastic Compute Cloud (EC2), AWS menyediakan server virtual yang dapat diskalakan untuk setiap bisnis.
+<img src=img/8.png>
+<h3>Why EC2?</h3>
+Amazon EC2 adalah yang harus dimiliki dan merupakan jantung dari sistem kami yang menyediakan kapasitas komputasi yang dapat diubah ukurannya. Kami pada dasarnya telah menyewa server virtual tempat aplikasi web kami berjalan.<br>
+Hal yang hebat di sini adalah, server EC2 tersebut tersebar di seluruh dunia. Bergantung pada kebutuhan Anda untuk mengukur dan pasar geografis mana yang akan ditargetkan pertama kali, Anda dapat memilih di antara berbagai lokasi EC2 Anda.
+<img src=img/9.png>
+<h3>Web Storage S3</h3>
+<img src=img/10.png>
+Amazon Simple Storage Service (S3) mudah digunakan, menyimpan, dan mengambil data dalam jumlah berapa pun. Anda mungkin bertanya-tanya apakah Amazon S3 hanya dapat digunakan dengan layanan AWS lainnya? Jawaban yang bagus adalah: tidak. Ini juga dapat digunakan sendiri atau dengan repositori dan gateway penyimpanan pihak ketiga lainnya. Dan tentu saja, ini bekerja sangat baik dengan EC2.
+Selain menyimpan data aplikasi web Anda dengan S3, ini mungkin berfungsi dengan baik untuk pencadangan, arsip, atau analitik data besar.
+<h3>Content Delivery Network</h3>
+content delivery network (CDN) pada dasarnya adalah sistem server terdistribusi yang memungkinkan Anda menyajikan konten kepada pengguna aplikasi Anda dengan kinerja tinggi dan ketersediaan tinggi.<br>
+Anggaplah Anda telah menginstal 3 EC2. Satu di AS, satu di Eropa dan satu di Singapura. Jika seseorang dari New York mengunjungi aplikasi Anda, CDN memungkinkan Anda untuk menyajikan konten kepada pengguna melalui EC2 yang berlokasi di AS.
+<img src=img/11.png>
