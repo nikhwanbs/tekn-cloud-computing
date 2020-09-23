@@ -1,18 +1,14 @@
 <h1>Berikut adalah Overview dari Aplikasi Diagram Berbasis Cloud</h1>
 
 <h2>Draw.io</h2>
-draw.io is a free diagramming application that allows users to create and share diagrams within a web browser. The online tool works with G Suite/Google Drive and Dropbox, and is deeply integrated and audit-friendly in Atlassian's Confluence and Jira products. Users can also work on diagrams offline and save locally using draw.io’s desktop app for macOS, Windows and Linux.<br>
+Draw.io adalah aplikasi pembuatan diagram gratis yang memungkinkan pengguna membuat dan berbagi diagram dalam browser web. Alat online berfungsi dengan G Suite / Google Drive dan Dropbox, dan sangat terintegrasi dan ramah audit dalam produk Atlassian's Confluence dan Jira. Pengguna juga dapat mengerjakan diagram secara offline dan menyimpan secara lokal menggunakan aplikasi desktop draw.io untuk macOS, Windows, dan Linux. <br>
 
-draw.io provides an intuitive interface with drag & drop functionality, customizable diagram templates, and an extensive shape library. Users are able to create and edit a variety of diagrams including flowcharts, org charts, process diagrams, ER diagrams, UML, network diagrams, and more. draw.io’s rich functionality allows users to track and restore changes, import and export various formats, and automatically publish and share work.<br>
-
-BPMN diagrams help users present complex processes and workflows, useful for onboarding new employees, or when a business process needs to be audited. UML diagrams help document all aspects of software engineering projects, whether behavioral or structural. Flow charts can be created using the drag & drop interface, including a variety of shapes to define and depict complex workflows.<br>
-
-Mind maps help visually brainstorm concepts or problems by organizing information into related topics, useful for making decisions or preparing a complex document. Network diagrams allow users to visualize their IT infrastructure by creating a detailed illustration of their network with all of its devices. Users can plan the layout of a website or user interface using wireframe models, while mockups help prototype interfaces during application development to optimize their usability.<br>
-<h1>Berikut adalah Overview dari Aplikasi Diagram Berbasis non-Cloud</h1>
+Draw.io menyediakan antarmuka yang intuitif dengan fungsionalitas seret & lepas, templat diagram yang dapat disesuaikan, dan perpustakaan bentuk yang luas. Pengguna dapat membuat dan mengedit berbagai diagram termasuk diagram alur, bagan organisasi, diagram proses, diagram ER, UML, diagram jaringan, dan banyak lagi. Fungsionalitas draw.io yang kaya memungkinkan pengguna untuk melacak dan memulihkan perubahan, mengimpor dan mengekspor berbagai format, dan secara otomatis menerbitkan dan berbagi pekerjaan.<br>
 
 <h2>Microsoft Visio</h2>
-Microsoft Visio is software that empowers diagramming, data visualization, and process modelling in a familiar interface. Visio comes with an array of templates and built-in shapes that allow creating virtually any diagram of any complexity. Visio also allows users to define their own shapes and import them into the drawing.<br>
-Newer versions of Visio from Visio 2013 onwards support .vsdx format that allows enhanced compression and many other features compared to the older .vsd format supported by Visio 2010 and earlier versions. <br>
+Microsoft Visio adalah perangkat lunak yang memberdayakan pembuatan diagram, visualisasi data, dan pemodelan proses dalam antarmuka yang sudah dikenal. Visio hadir dengan serangkaian templat dan bentuk bawaan yang memungkinkan pembuatan hampir semua diagram dengan kerumitan apa pun. Visio juga memungkinkan pengguna untuk menentukan bentuk mereka sendiri dan mengimpornya ke dalam gambar. <br>
+
+Versi Visio yang lebih baru dari Visio 2013 dan seterusnya mendukung format .vsdx yang memungkinkan peningkatan kompresi dan banyak fitur lainnya dibandingkan dengan format .vsd lama yang didukung oleh Visio 2010 dan versi yang lebih lama. <br>
 
 <h2>Caligra</h2>
 Calligra Flow memiliki nama lain yaitu Kivio. Ini adalah software gratis dan merupakan bagian dari Calligra Suite. Software ini masih cukup muda karena baru dirilis pada 1 Februari 2018.<br>
@@ -35,5 +31,6 @@ Semua sistem operasi didukung yED Graph Editor mulai dari Windows, MacOS, hingga
 <h2>Pencil Project</h2>
 Pencil Project merupakan software dengan berbagai fitur shape dan interface yang cukup simpel. Software ini bisa digunakan secara gratis dari website resminya.<br>
 Keunggulan perangkat lunak ini adalah bisa digunakan di hampir semua sistem operasi. Selain itu, diagram yang digunakan juga dapat disesuaikan dengan perangkat pengguna, seperti android dan iOS.<br>
+
 Pencil Project juga sudah terhubung dengan OpenClipart.org. Hal ini sangat membantu terutama untuk mendapatkan clipart dari internet dengan lebih cepat.<br>
 Flowchart yang dihasilkan dari software ini dapat diekspor dalam berbagai format file di antaranya Adobe PDF, teks Open Office, Inkspace SVG, dan link web.<br>
