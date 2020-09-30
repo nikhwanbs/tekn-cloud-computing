@@ -76,11 +76,13 @@ Run the following command to install the dependencies, preparing your system for
 In this step you’ll learn how to propagate a local change to the application through to Heroku. As an example, you’ll modify the application to add an additional dependency (the Cowsay library) and the code to use it.
 
 First, use composer to require the new dependency:
+<br>
 <img src=tgs/Screenshot_18.png>
 <br>
 This will also change composer.json. If you introduced the dependency by modifying the composer.json file yourself, be sure to update the dependencies by running:
+<br>
 <img src=tgs/Screenshot_19.png>
-
+<br>
 Now modify web/index.php to use this library. Add a new route after the existing one, for /cowsay:
 
 <img src=tgs/Screenshot_20.png>
