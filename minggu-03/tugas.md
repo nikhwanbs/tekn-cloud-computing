@@ -100,7 +100,52 @@ Now deploy, just as you did previously:
 <img src=tgs/Screenshot_21c.png>
 
 Finally, check that everything is working:
-
+<img src=tgs/Screenshot_23.png>
 <img src=tgs/Screenshot_22.png>
 
 <h3>Start an interactive shell</h3>
+You can run a command, typically scripts and applications that are part of your app, in a one-off dyno using the heroku run command. It can also be used to launch an interactive PHP shell attached to your local terminal for experimenting in your app’s environment:
+<img src=tgs/Screenshot_23b.png>
+To get a real feel for how dynos work, you can create another one-off dyno and run the bash command, which opens up a shell on that dyno. You can then execute commands there. Each dyno has its own ephemeral filespace, populated with your app and its dependencies - once the command completes (in this case, bash), the dyno is removed.
+<img src=tgs/Screenshot_24.png>
+
+<h3>Define config vars</h3>
+Heroku lets you externalise configuration - storing data such as encryption keys or external resource addresses in config vars.
+
+At runtime, config vars are exposed as environment variables to the application.
+
+Modify web/index.php so that root route returns the word Hello repeated by the value of the TIMES environment variable:
+<img src=tgs/Screenshot_24b.png>
+To set the config var on Heroku, execute the following :
+<img src=tgs/Screenshot_25b.png>
+View the config vars that are set using heroku config:
+<img src=tgs/Screenshot_25.png>
+
+<h3>Provision a database</h3>
+The add-on marketplace has a large number of data stores, from Redis and MongoDB providers, to Postgres and MySQL. In this step you will add a free Heroku Postgres Starter Tier dev database to your app.
+
+Add the database:
+<img src=tgs/Screenshot_26.png>
+This creates a database, and sets a DATABASE_URL config var (you can check by running heroku config).
+
+Modify composer.json to include a dependency for a simple PDO service provider, csanquer/pdo-service-provider:
+<img src=tgs/Screenshot_27.png>
+Install the new dependency:
+<img src=tgs/Screenshot_28.png>
+Now modify index.php to extend the app to add a PDO connection:
+<img src=tgs/Screenshot_29b.png>
+
+Note how this code retrieves the DATABASE_URL config var from the environment using getenv(), and extracts information on hostname, database and credentials from that config var using parse_url().
+
+In the same file, add a new handler to query the database:
+<img src=tgs/Screenshot_29v.png>
+This ensures that when you access your app using the /db route, it will return all rows in the test_table table, and render the results using the database.twig template. Create the template in the web/views directory:
+<img src=tgs/Screenshot_29.png>
+If you get lost making these changes, take a look at the db branch of the sample app.
+
+Deploy the app modifications to Heroku:
+<img src=tgs/Screenshot_30.png>
+If you now access /db you will see Nameless in the output as there is no table in the database. Assuming that you have Postgres installed locally, use the heroku pg:psql command to connect to the database you provisioned earlier, create a table and insert a row:
+<img src=tgs/Screenshot_31.png>
+Now when you access your app’s /db route, you will see something like this:
+<img src=tgs/Screenshot_32.png>
