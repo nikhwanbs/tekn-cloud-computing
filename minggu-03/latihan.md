@@ -91,5 +91,5 @@ Now deploy, just as you did previously:
 <img src=lat/Screenshot_17.png>
 Finally, check that everything is working:
 
-$ heroku open
+$ heroku open <br>
 <img src=lat/Screenshot_16.png>
