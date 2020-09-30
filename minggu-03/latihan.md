@@ -1,13 +1,3 @@
-<h1>Latihan Pertemuan 003</h1>
-
-<ol>
-<ul>Membuat akun di Heroku.com</ul>
-<img src=lat/heroku5.png>
-<ul>Membuat aplikasi baru memalui dashboard</ul>
-<img src=lat/createnewapp.png>
-<ul>Install Python versi 3.7</ul>
-<img src=lat/python.png>
-</ol>
 <h1>Getting Started on Heroku with Python</h1>
 This tutorial will have you deploying a Python app (a simple Django app) in minutes.
 
@@ -51,10 +41,12 @@ Heroku recognizes an app as a Python app by looking for key files. Including a r
 
 The demo app you deployed already has a requirements.txt, and it looks something like this:
 <img src=lat/req.png>
+<br>
 To do this locally, you can run the following command:
 <img src=lat/Screenshot_11.png>
 Installing the dependencies also caused several other dependencies to be installed. You can see them by using pip’s feature list:
 <img src=lat/Screenshot_12.png>
+<br>
 Once dependencies are installed, you will be ready to run your app locally.
 <h3>Run the app locally</h3>
 The app is almost ready to start locally. Django uses local assets, so first, you’ll need to run collectstatic:
