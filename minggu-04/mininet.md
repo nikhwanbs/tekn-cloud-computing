@@ -140,9 +140,9 @@ Outside the CLI, other verbosity levels can be used, such as warning, which is u
 <h2>Custom Topologies</h2>
 Custom topologies can be easily defined as well, using a simple Python API, and an example is provided in custom/topo-2sw-2host.py. This example connects two switches directly, with a single host off each switch:
 <br>
-<img src=img/Screenshot_23a.png>
-<br>
 <img src=img/Screenshot_23.png>
+<br>
+<img src=img/Screenshot_23b.png>
 <br>
 When a custom mininet file is provided, it can add new topologies, switch types, and tests to the command-line. For example:
 <br>
