@@ -1,4 +1,4 @@
-<h1>Mininet Walkthrough
+<h1>Mininet Walkthrough</h1>
 <h1>Part 1: Everyday Mininet Usage</h1>
 First, a (perhaps obvious) note on command syntax for this walkthrough:
 <ol>
@@ -140,6 +140,8 @@ Outside the CLI, other verbosity levels can be used, such as warning, which is u
 <h2>Custom Topologies</h2>
 Custom topologies can be easily defined as well, using a simple Python API, and an example is provided in custom/topo-2sw-2host.py. This example connects two switches directly, with a single host off each switch:
 <br>
+<img src=img/Screenshot_23a.png>
+<br>
 <img src=img/Screenshot_23.png>
 <br>
 When a custom mininet file is provided, it can add new topologies, switch types, and tests to the command-line. For example:
@@ -226,14 +228,6 @@ The examples directory in the Mininet source tree includes examples of how to us
 One example that may be particularly useful runs an SSH daemon on every host:
 <br>
 <img src=img/Screenshot_37.png>
-<br>
-From another terminal, you can ssh into any host and run interactive commands:
-<br>
-<img src=img/>
-<br>
-Exit SSH example mininet:
-<br>
-<img src=img/>
 <br>
 <h1>Part 5: Walkthrough Complete!</h1>
 Congrats! You’ve completed the Mininet Walkthrough. Feel free to try out new topologies and controllers or check out the source code.
