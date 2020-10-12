@@ -34,8 +34,8 @@ MS Windows: gradlew ofbiz
 <img src=img/start.png>
 <br>
 <img src=img/start2.png>
-_______________________________________________________________________________
-Catatan: Abaikan indikator %  karena tugas ini tidak berakhir selama OFBiz sedang berjalan.
+_______________________________________________________________________________<br>
+Catatan: Abaikan indikator %  karena tugas ini tidak berakhir selama OFBiz sedang berjalan.<br>
 _______________________________________________________________________________
 
 <h2>Kunjungi OFBiz melalui browser Anda:</h2>
@@ -47,8 +47,8 @@ Akan muncul tampilan informasi user login dan password
 <br>
 Tampilan login
 <br>
-<img src=img/web1.png>
+<img src=img/web2.png>
 <br>
 Tampilan awal Apache Ofbiz
 <br>
-<img src=img/web2.png>
+<img src=img/web3.png>
