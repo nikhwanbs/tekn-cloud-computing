@@ -5,19 +5,19 @@ Berikut langkah langkahnya :
 <ol>
 <li>Download installernya terlebih dahulu di golang.org</li>
 <li>Setelah didownload, jalankan installernya</l1>
-<img src="img/Screenshot_01.png">
+<img src="img/Screenshot_1.png">
 <li>Kemudian klik next, pahami ketentuan lisensinya, lalu centang
 "I accept the terms in the License Agreement"</li0>
-<img src="img/Screenshot_02.png">
+<img src="img/Screenshot_2.png">
 <li>Pilih lokasi direktori yang hendak dipakai Golang</li>
-<img src="img/Screenshot_03.png">
+<img src="img/Screenshot_3.png">
 <li>Golang sudah siap diinstall, namun pastikan dulu settingan sebelumnya
 jika ada yang ingin diubah masih dapat kembali, jika tidak ada klik Install</li>
-<img src="img/Screenshot_04.png">
+<img src="img/Screenshot_4.png">
 <li>Mohon ditunggu, saat ini sedang proses penginstallan</li>
-<img src="img/Screenshot_05.png">
+<img src="img/Screenshot_5.png">
 <li>Bahasa Pemrograman GO saat ini sudah terinstall</li>
-<img src="img/Screenshot_06.png">
+<img src="img/Screenshot_6.png">
 <li>Pengecekan versi golang di CMD</li>
-<img src="img/Screenshot_07.png">
+<img src="img/Screenshot_7.png">
 </ol>
