@@ -4,10 +4,10 @@ Go adalah bahasa pemrograman sumber terbuka yang memudahkan pembuatan perangkat 
 Berikut langkah langkahnya : 
 <ol>
 <li>Download installernya terlebih dahulu di golang.org</li>
-<li>Setelah didownload, jalankan installernya</l1>
+<li>Setelah didownload, jalankan installernya</li>
 <img src="img/Screenshot_1.png">
 <li>Kemudian klik next, pahami ketentuan lisensinya, lalu centang
-"I accept the terms in the License Agreement"</li0>
+"I accept the terms in the License Agreement"</li>
 <img src="img/Screenshot_2.png">
 <li>Pilih lokasi direktori yang hendak dipakai Golang</li>
 <img src="img/Screenshot_3.png">
