@@ -3,7 +3,7 @@
 <img src="img/9.png">
 <h3>Berikut source codenya</h3>
 Buat koneksi Ke database
-```bash
+```
 package main
 
 import (
