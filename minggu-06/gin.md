@@ -3,15 +3,15 @@
 <img src="img/9.png">
 <h3>Berikut source codenya</h3>
 Buat koneksi Ke database
-```
+
 ```package main
 
-```import (
-```	"github.com/jinzhu/gorm"
-```	"github.com/gin-gonic/gin"
-```	_ "github.com/jinzhu/gorm/dialects/mysql"
-```	"net/http"
-```)
+import (
+	"github.com/jinzhu/gorm"
+	"github.com/gin-gonic/gin"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"net/http"
+)
 
 var db *gorm.DB
 
