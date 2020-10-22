@@ -28,6 +28,7 @@ func init() {
 <br>
 Selanjutnya buat model nya untuk olah datanya. kalau di golang namanya adalah struct
 kodingannya sebagai berikut:
+
 ```type (
 	student struct {
 		gorm.Model
@@ -47,8 +48,10 @@ kodingannya sebagai berikut:
 	}
 )
 ```
+
 <br>
 Selanjutnya  buat function untuk Create nya. Kodingannya sebagai berikut :
+
 ```func cretedStudent(c *gin.Context) {
 	var std transformedStudent
 	var model student
@@ -63,8 +66,10 @@ Selanjutnya  buat function untuk Create nya. Kodingannya sebagai berikut :
 	}
 }
 ```
+
 <br>
 Selajutnya membuat function get All berikut kodinganya:
+
 ```func fetchAllStudent(c *gin.Context) {
 	var model [] student
 	var vo [] transformedStudent
@@ -84,6 +89,7 @@ Selajutnya membuat function get All berikut kodinganya:
 
 <br>
 Selanjutnya membuat function get Detail berikut kodinganya:
+
 ```func fetchSingleStuden(c *gin.Context) {
 	var model student
 	var vo transformedStudent
@@ -98,8 +104,10 @@ Selanjutnya membuat function get Detail berikut kodinganya:
 	c.JSON(http.StatusOK, gin.H{"message": http.StatusOK, "result": vo})
 }
 ```
+
 <br>
 Selanjutnya membuat function update berikut kodinganya :
+
 ```func updateStudent(c *gin.Context) {
 	var model student
 	var vo transformedStudent
@@ -120,8 +128,10 @@ Selanjutnya membuat function update berikut kodinganya :
 	}
 }
 ```
+
 <br>
 Selanjutnya buat function delete berikut kodinganya:
+
 ```func deleteStudent(c *gin.Context) {
 	var model student
 	modelID := c.Param("id")
@@ -134,8 +144,10 @@ Selanjutnya buat function delete berikut kodinganya:
 	c.JSON(http.StatusOK, gin.H{"message": http.StatusOK, "result": "Data Telah berhasil di hapus"})
 }
 ```
+
 <br>
 Selanjutnya buat routernya untuk mengases semua function melalui REST HTTP berikut kodinganya:
+
 ```func main() {
 
 	router := gin.Default()
