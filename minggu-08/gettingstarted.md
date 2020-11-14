@@ -5,15 +5,11 @@ title: Get started with Docker Compose
 ---
 
 On this page you build a simple Python web application running on Docker
-Compose. The application uses the Flask framework and maintains a hit counter in
-Redis. While the sample uses Python, the concepts demonstrated here should be
-understandable even if you're not familiar with it.
+Compose. The application uses the Flask framework and maintains a hit counter in Redis.
 
 ## Prerequisites
 
-Make sure you have already installed both [Docker Engine](../get-docker.md)
-and [Docker Compose](install.md). You don't need to install Python or Redis, as
-both are provided by Docker images.
+Make sure you have already installed both Docker Engine and Docker Compose. You don't need to install Python or Redis, as both are provided by Docker images.
 
 ## Step 1: Setup
 
@@ -22,8 +18,8 @@ Define the application dependencies.
 1. Create a directory for the project:
 
    ```console
-   $ mkdir composetest
-   $ cd composetest
+   c:\Users\Ikhwan> mkdir composetest
+   c:\Users\Ikhwan> cd composetest
    ```
 
 2. Create a file called `app.py` in your project directory and paste this in:
@@ -56,16 +52,6 @@ Define the application dependencies.
 
    In this example, `redis` is the hostname of the redis container on the
    application's network. We use the default port for Redis, `6379`.
-
-   > Handling transient errors
-   >
-   > Note the way the `get_hit_count` function is written. This basic retry
-   > loop lets us attempt our request multiple times if the redis service is
-   > not available. This is useful at startup while the application comes
-   > online, but also makes our application more resilient if the Redis
-   > service needs to be restarted anytime during the app's lifetime. In a
-   > cluster, this also helps handling momentary connection drops between
-   > nodes.
 
 3. Create another file called `requirements.txt` in your project directory and
    paste this in:
@@ -108,11 +94,6 @@ This tells Docker to:
 * Copy the current directory `.` in the project to the workdir `.` in the image.
 * Set the default command for the container to `flask run`.
 
-For more information on how to write Dockerfiles, see the
-[Docker user guide](../develop/index.md)
-and the [Dockerfile reference](/engine/reference/builder/).
-
-
 ## Step 3: Define services in a Compose file
 
 Create a file called `docker-compose.yml` in your project directory and paste
@@ -147,7 +128,7 @@ image pulled from the Docker Hub registry.
 1. From your project directory, start up your application by running `docker-compose up`.
 
    ```console
-   $ docker-compose up
+   c:\Users\Ikhwan\composetest>docker-compose up
 
    Creating network "composetest_default" with the default driver
    Creating composetest_web_1 ...
@@ -207,7 +188,7 @@ image pulled from the Docker Hub registry.
    Listing images at this point should return `redis` and `web`.
 
    ```console
-   $ docker image ls
+   c:\Users\Ikhwan\composetest>docker image ls
 
    REPOSITORY        TAG           IMAGE ID      CREATED        SIZE
    composetest_web   latest        e2c21aa48cc1  4 minutes ago  93.8MB
@@ -223,8 +204,7 @@ image pulled from the Docker Hub registry.
 
 ## Step 5: Edit the Compose file to add a bind mount
 
-Edit `docker-compose.yml` in your project directory to add a
-[bind mount](../storage/bind-mounts.md) for the `web` service:
+Edit `docker-compose.yml` in your project directory to add a bind mount for the `web` service:
 
 ```yaml
 version: "{{ site.compose_file_v3 }}"
@@ -252,7 +232,7 @@ mode and reload the code on change. This mode should only be used in development
 From your project directory, type `docker-compose up` to build the app with the updated Compose file, and run it.
 
 ```console
-$ docker-compose up
+c:\Users\Ikhwan\composetest>docker-compose up
 
 Creating network "composetest_default" with the default driver
 Creating composetest_web_1 ...
@@ -266,25 +246,6 @@ web_1    |  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 
 Check the `Hello World` message in a web browser again, and refresh to see the
 count increment.
-
-> Shared folders, volumes, and bind mounts
->
-> * If your project is outside of the `Users` directory (`cd ~`), then you
-need to share the drive or location of the Dockerfile and volume you are using.
-If you get runtime errors indicating an application file is not found, a volume
-mount is denied, or a service cannot start, try enabling file or drive sharing.
-Volume mounting requires shared drives for projects that live outside of
-`C:\Users` (Windows) or `/Users` (Mac), and is required for _any_ project on
-Docker Desktop for Windows that uses [Linux containers](../docker-for-windows/index.md#switch-between-windows-and-linux-containers).
-For more information, see [File sharing](../docker-for-mac/index.md#file-sharing) on Docker
-for Mac, and the general examples on how to
-> [Manage data in containers](../storage/volumes.md).
->
-> * If you are using Oracle VirtualBox on an older Windows OS, you might encounter an issue with shared folders as described in this [VB trouble
-ticket](https://www.virtualbox.org/ticket/14920). Newer Windows systems meet the
-requirements for [Docker Desktop for Windows](../docker-for-windows/install.md) and do not
-need VirtualBox.
-{: .important}
 
 ## Step 7: Update the application
 
@@ -311,12 +272,12 @@ If you want to run your services in the background, you can pass the `-d` flag
 see what is currently running:
 
 ```console
-$ docker-compose up -d
+c:\Users\Ikhwan\composetest>docker-compose up -d
 
 Starting composetest_redis_1...
 Starting composetest_web_1...
 
-$ docker-compose ps
+c:\Users\Ikhwan\composetest>docker-compose ps
 
 Name                 Command            State       Ports
 -------------------------------------------------------------------
@@ -329,16 +290,16 @@ services. For example, to see what environment variables are available to the
 `web` service:
 
 ```console
-$ docker-compose run web env
+c:\Users\Ikhwan\composetest>docker-compose run web env
 ```
 
-See `docker-compose --help` to see other available commands. You can also install [command completion](completion.md) for the bash and zsh shell, which also shows you available commands.
+See `docker-compose --help` to see other available commands. You can also install command completion for the bash and zsh shell, which also shows you available commands.
 
 If you started Compose with `docker-compose up -d`, stop
 your services once you've finished with them:
 
 ```console
-$ docker-compose stop
+c:\Users\Ikhwan\composetest>docker-compose stop
 ```
 
 You can bring everything down, removing the containers entirely, with the `down`
@@ -346,7 +307,7 @@ command. Pass `--volumes` to also remove the data volume used by the Redis
 container:
 
 ```console
-$ docker-compose down --volumes
+c:\Users\Ikhwan\composetest>docker-compose down --volumes
 ```
 
 At this point, you have seen the basics of how Compose works.
