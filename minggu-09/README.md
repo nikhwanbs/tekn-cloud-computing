@@ -18,7 +18,6 @@ Resolving deltas: 100% (5/5), done.
 In this step we’re going to start a new container and tell it to run the hostname command. The container will start, execute the hostname command, then exit.
 
 1. Run the following command in your Linux console.
-
     ```console
     $  docker container run alpine hostname
     Unable to find image 'alpine:latest' locally
@@ -37,6 +36,7 @@ List all containers.
     CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
     c523ee190124        alpine              "hostname"          2 minutes ago       Exited (0) 2 minutes ago                       cool_goodall
     ```
+
 ### Run an interactive Ubuntu container
 You can run a container based on a different version of Linux than is running on your Docker host.
 
@@ -121,9 +121,9 @@ Background containers are how you’ll run most applications. Here’s a simple 
 3. You can check what’s happening in your containers by using a couple of built-in Docker commands: docker container logs and docker container top.
     ```console
     <output truncated>
-   2017-09-29T16:02:58.605004Z 0 [Note] Executing 'SELECT * FROM INFORMATION_SCHEMA.TABLES;' to get a list of tables using the deprecated partition engine. You may use the startup option '--disable-partition-engine-check' to skip this check.
-   2017-09-29T16:02:58.605026Z 0 [Note] Beginning of list of non-natively partitioned tables
-   2017-09-29T16:02:58.616575Z 0 [Note] End of list of non-natively partitioned tables
+   2020-11-27T16:02:58.605004Z 0 [Note] Executing 'SELECT * FROM INFORMATION_SCHEMA.TABLES;' to get a list of tables using the deprecated partition engine. You may use the startup option '--disable-partition-engine-check' to skip this check.
+   2020-11-27T16:02:58.605026Z 0 [Note] Beginning of list of non-natively partitioned tables
+   2020-11-27T16:02:58.616575Z 0 [Note] End of list of non-natively partitioned tables
     ```
 
     Let’s look at the processes running inside the container.
@@ -450,5 +450,5 @@ Notice that this command maps the new container to port 8080 on the host. This i
     2.0: digest: sha256:4559ab4446712282d99170332d7090d0b0a3241b347c8dfa1c2f22975bd273ce size: 1777
     ```
 
-You can browse to https://hub.docker.com/r/<your docker id>/ and see your newly-pushed Docker images. These are public repositories, so anyone can pull the image - you don’t even need a Docker ID to pull public images. Docker Hub also supports private repositories.
+Browse to https://hub.docker.com/r/nikhwanbs/ and see the newly-pushed Docker images. These are public repositories, so anyone can pull the image - you don’t even need a Docker ID to pull public images. Docker Hub also supports private repositories.
 ![My Docker Hub](img/Screenshot_46.png)
