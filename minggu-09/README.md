@@ -30,7 +30,8 @@ In this step we’re going to start a new container and tell it to run the hostn
 
 2. Docker keeps a container running as long as the process it started inside the container is still running. In this case the hostname process exits as soon as the output is written. This means the container stops. However, Docker doesn’t delete resources by default, so the container still exists in the Exited state.
 
-List all containers.
+    List all containers.
+
     ```console
     $  docker container ls --all
     CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
