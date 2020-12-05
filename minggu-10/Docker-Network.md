@@ -834,7 +834,7 @@ root@537653ec128d:/#
 ```
 
 ## Membersihkan
-Praktik dasar bagaimana Docker network bekerja sudah selesai. Mari bersihkan service yang sudah dibuat, containerm dan kemudian disable Swarm.
+Praktik dasar bagaimana Docker network bekerja sudah selesai. Mari bersihkan service yang sudah dibuat, container dan kemudian disable Swarm.
 
 jalankan perintah **docker service rm myservice** untuk menghapus service bernama *myservice*
 ```terminal
