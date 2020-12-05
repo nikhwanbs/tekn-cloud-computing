@@ -856,7 +856,8 @@ b1ef2b5df7ff bae5af290920
 
 ```
 
-Akhirnya, mari hapus node1 dan node2 dari Swarm. Dapat menjalankan perintah **docker swarm leave --force** 
+Akhirnya, mari hapus node1 dan node2 dari Swarm. Dapat menjalankan perintah **docker swarm leave --force**
+
 Jalankan perintah tersebut di node1
 ```terminal
 $ docker swarm leave --force
