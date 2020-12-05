@@ -1,9 +1,9 @@
 # Praktik Docker Networking
 Pada Praktik ini akan dipelajari tentang konsep Docker Networking. Akan ada beberapa contoh konsep networking, belajar tentang Bridge networking, dan Overlay networking.
 
-## Bagian #1 - Networking Basics
+## Bagian #1 - Basic Networking 
 ### Step 1: The Docker Network Command
-**docker network** adalah perintah utama untuk konfigurasi dan me-manage container networks. Jalankan perintah **docker network** dari terminal pertama, 
+**docker network** adalah perintah utama untuk konfigurasi dan me-manage container networks. Jalankan perintah **docker network** dari terminal pertama.
 ```terminal
 $ docker network
 
@@ -22,9 +22,9 @@ Commands:
 
 Run 'docker network COMMAND --help' for more information on a command.
 ```
-Output perintah menunjukkan cara menggunakan perintah serta semua sub-perintah *docker network*.
+Output menunjukkan cara menggunakan perintah serta semua sub-perintah *docker network*.
 
-### Step 2: List networks
+### Step 2: List network
 Jalankan perintah **docker network ls** untuk melihat *container networks* yang tersedia saat ini di dalam Docker host.
 ```terminal
 docker network ls
@@ -34,8 +34,8 @@ c31fcfcd6e1f        bridge              bridge              local
 51d28444a7b9        none                null                local
 ```
 
-### Step 3: Inspect a network
-Perintah **Step 3: Inspect a network** digunakan untuk melihat konfigurasi network secara detail. Detail yang dapat dilihat adalah name, ID, driver, IPAM driver, subnet info, connected containers, dan banyak lagi.
+### Step 3: Inspect sebuah network
+Perintah **docker network inspect** digunakan untuk melihat konfigurasi network secara detail. Detail yang dapat dilihat adalah name, ID, driver, IPAM driver, subnet info, connected containers, dan banyak lagi.
 
 Gunakan perintah **docker network inspect <network>** untuk melihat konfigurasi detail dari *container network* di dalam host. Perintah dibawah ini menunjukkan detail network bernawa **bridge**
 ```terminal
@@ -78,7 +78,7 @@ $ docker network inspect bridge
 ]
 ```
 
-### Step 4: List network driver plugins
+### Step 4: List dari network driver plugin
 Perintah **docker info** menunjukkan informasi menarik tentang instalasi Docker.
 Jalankan perintah **docker info** dan melihat info list dari *network plugins*
 ```terminal
@@ -149,7 +149,7 @@ WARNING: bridge-nf-call-ip6tables is disabled
 ```
 
 ## Bagian #2 - Bridge Networking
-### Step 1: The Basics
+### Step 1: Basics
 Setiap instalasi baru dari Docker sudah terdapat *pre-build* network bernama ***bridge***. Verifikasi ini dengan **docker network ls**.
 ```terminal
 $ docker network ls
@@ -207,7 +207,7 @@ $ ip a
        valid_lft forever preferred_lft forever
 ```
 
-### Step 2: Connect a container
+### Step 2: Menghubugkan container
 ***bridge*** network adalah network default dari sebuah container baru. Ini berarti tanpa menyertakan network lain secara spesifik, maka semua container baru akan terkoneksi dengan ***bridge*** network.
 
 Buat container baru dengan menjalankan **docker run -dt ubuntu sleep infinity**.
@@ -288,7 +288,7 @@ $ docker network inspect bridge
 ]
 ```
 
-### Step 3: Test network connectivity
+### Step 3: Uji konektivitas network
 Pada output sebelumnya, perintah **docker network inspect** menampilkan IP address daro container baru.
 Ping IP address dari container dari shell prompt dalam Docker host dengan menjalankan perintah ping **-c5 <IPv4 Address>**.
 ```terminal
@@ -363,7 +363,7 @@ $ docker stop 873b48766380
 ```
 >This shows that the new container can ping the internet and therefore has a valid and working network configuration.
 
-## Step 4: Configure NAT for external connectivity
+## Step 4: Konfigurasi NAT untuk konektivitas external
 Pada step ini, akan mulai dengan container ***NGINX*** baru dan map port 8080 di Docker host ke port 80 dalam container. Ini berarti traffic yang mengenai Docker host dengan port 8080 akan melewati port 80 dalam container. 
 Mulai container baru berdasar NGINGX image original, dengan menjalankan perintah **$ docker run --name web1 -d -p 8080:80 nginx**.
 ```terminal
@@ -423,7 +423,7 @@ Commercial support is available at
 ```
 
 ## Bagian #3 - Overlay Networking
-### Step 1: The Basics
+### Step 1: Basics
 Dalam langkah ini, akan diinstalasi Swarm baru, join sebuah single worker node, dan verify operasinya berjalan.
 Jalankan **docker swarm init --advertise-addr $(hostname -i)**.
 ```terminal
@@ -451,7 +451,7 @@ yumm2034th5aayirw4zwi1c2o *   node1               Ready               Active    
 korxqwsc8qua0zoqley0zy7ap     node2               Ready               Active                                  19.03.11
 ```
 
-### Step 2: Create an overlay network
+### Step 2: Membuat sebuah overlay network
 Saat ini sudah terinstall Swarm, maka dari itu saatnya membuat ***overlay*** network.
 Buat sebuah overlay network baru bernama "overnet" dengan menjalankan **docker network create -d overlay overnet**.
 ```terminal
@@ -522,7 +522,7 @@ $ docker network inspect overnet
 ]
 ```
 
-### Step 3: Create a service
+### Step 3: Membuat sebuah service
 Saat ini sudah terinstall Swarm dan overlay network, saatnya membuat sebuah service yang memakai network.
 Jalankan program berikut di terminal pertama untuk membuat service baru dengan nama *myservice* di *overnet* network dengan dua tasks/replika.
 ```terminal
@@ -626,7 +626,7 @@ $ docker network inspect overnet
 ]
 ```
 
-## Step 4: Test the network
+## Step 4: Uji network
 Untuk melengkapi step ini, dibutuhkan IP address dari service yang running di ***node2*** (*10.0.1.3*).
 Jalankan perintah berikut diterminal pertama.
 ```terminal
@@ -675,7 +675,7 @@ root@b1ef2b5df7ff:/#
 
 Output diatas menampilkan bahwa kedua task dari service **myservice** berada di overlay network yang sama dengan memutar kedua node dan mereka dapat menggunakan network untuk komunikasi.
 
-## Step 5: Test service discovery
+## Step 5: Uji service discovery
 Sekarang, kita sudah memiliki service yang berjalan menggunakan overlay network, saatnya mempelajari service.
 Pastikan masih berada di dalam container, kemudian jalankan perintah **cat /etc/resolv.conf**
 ```terminal
@@ -833,7 +833,7 @@ rtt min/avg/max/mdev = 0.067/0.094/0.144/0.027 ms
 root@537653ec128d:/#
 ```
 
-## Cleaning Up
+## Membersihkan
 Praktik dasar bagaimana Docker network bekerja sudah selesai. Mari bersihkan service yang sudah dibuat, containerm dan kemudian disable Swarm.
 
 jalankan perintah **docker service rm myservice** untuk menghapus service bernama *myservice*
