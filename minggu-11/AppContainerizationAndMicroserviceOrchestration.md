@@ -364,7 +364,7 @@ app.run(host="0.0.0.0")
 ```
 
 Here, we are importing extract_links function from the linkextractor module and converting the returned list of objects into a JSON response.
-[RIGHT HERE]
+
 It’s time to build a new image with these changes in place:
 ```terminal
 $ docker image build -t linkextractor:step3 .
@@ -887,7 +887,7 @@ Connection: Keep-Alive
 ]
 ```
 Now, open the web interface by visiting the Link Extractor and extract links of a few URLs. Also, try to repeat these attempts for some URLs. If everything is alright, the web application should behave as before without noticing any changes in the API service (which is completely replaced).
-(Web tidak ada respon)
+(Web no respon)
 
 ![Web norespon](img/4.png)
 
