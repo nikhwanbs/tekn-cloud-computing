@@ -11,12 +11,13 @@ Dalam arsitektur ini, Docker, atau runtime container, hanya digunakan untuk menj
 
 ## Kubernetes cluster
 ![Kubernetes cluster](img/1.png)
+
 Setiap node Kubernetes berbicara dengan bidang kontrol. kubelet pada setiap node mengambil metadata dan menjalankan CRI untuk menjalankan create / delete container pada node.
 
 ## Tetapi mengapa Docker tidak digunakan lagi?
 Memiliki lebih banyak fitur sementara Anda tidak pernah menggunakannya, itu sendiri dapat menjadi risiko keamanan. Semakin sedikit fitur yang Anda miliki, semakin kecil permukaan serangannya.
+
 ![Docker Architecture](img/2.png)
-Redbox; apa yang kubernetes butuhkan
 
 ## CRI Runtimes
 ### Containerd 
@@ -27,6 +28,7 @@ Terutama dikembangkan oleh orang-orang Red Hat, sekarang digunakan di Red Hat Op
 Kekuatan CRI-O adalah minimalisnya. Mereka adalah runtime CRI murni sehingga CRI-O tidak memiliki apa pun yang tidak diperlukan CRI. Akan lebih sulit untuk bermigrasi dari Docker ke CRI-O karena itu, ia masih menyediakan apa yang Anda butuhkan untuk menjalankan aplikasi di Kubernetes.
 
 Cara kerja container runtime di Kubernetes
+
 ![Cara kerja container runtime](img/3.png)
 
 ### OCI Runtimes 
@@ -46,9 +48,9 @@ Seorang peretas yang buruk dapat mengambil root dan mesin host. Segalanya pasti 
 gVisor adalah runtime OCI yang awalnya dibuat oleh orang-orang Google. Ini sebenarnya berjalan di infrastruktur mereka untuk menjalankan layanan Cloud mereka seperti Google Cloud Run, Google App Engine (generasi ke-2), dan Google Cloud Functions dan lainnya.
 gVisor memiliki lapisan "kernel tamu" yang berarti aplikasi dalam container tidak dapat langsung menyentuh lapisan kernel host. Bahkan jika mereka berpikir demikian, mereka hanya menyentuh kernel tamu gVisor.
 Perbedaan penting dari runC adalah sebagai berikut.
-    •	Performa lebih buruk
-    •	Lapisan kernel Linux tidak 100% kompatibel
-    •	Tidak didukung secara default
+- Performa lebih buruk
+- Lapisan kernel Linux tidak 100% kompatibel
+- Tidak didukung secara default
 
 ## Podman
 Podman adalah mesin kontainer tanpa daemon untuk mengembangkan, mengelola, dan menjalankan Kontainer OCI di Sistem GNU/Linux. Kontainer dapat dijalankan sebagai root atau dalam mode tanpa root. 
@@ -56,11 +58,11 @@ Sederhananya: `alias docker = podman`.
 Dan jalankan opsi perintah seperti menjalankan docker.
 
 Cukuplah untuk mengatakan bahwa ada beberapa alasan mengapa pengguna Docker khawatir tentang pendekatan ini saat penggunaan meningkat :
-    •	Satu proses bisa menjadi satu titik kegagalan.
-    •	Proses ini memiliki semua proses anak (wadah yang berjalan).
-    •	Jika terjadi kegagalan, maka ada orphaned processes.
-    •	Membangun kontainer menyebabkan kerentanan keamanan.
-    •	Semua operasi Docker harus dilakukan oleh pengguna (atau pengguna) dengan otoritas root penuh yang sama.
+- Satu proses bisa menjadi satu titik kegagalan.
+- Proses ini memiliki semua proses anak (wadah yang berjalan).
+- Jika terjadi kegagalan, maka ada orphaned processes.
+- Membangun kontainer menyebabkan kerentanan keamanan.
+- Semua operasi Docker harus dilakukan oleh pengguna (atau pengguna) dengan otoritas root penuh yang sama.
 
 ### Karakteristik Podman
     -	run interface 
@@ -80,7 +82,9 @@ Ini karena repositori lokal Podman ada di / var / lib / containers, bukan / var 
 
 ## Buildah
 Buildah (dinamai untuk kesenangan karena aksen Boston Dan Walsh saat mengucapkan "builder") cocok dengan kriteria ini.
+
 - builder container images 
+
 Namun, jika kita ingin menggunakan cluster Kubernetes yang sama untuk melakukan build, seperti dalam kasus cluster OpenShift, maka kita memerlukan alat baru untuk melakukan build yang tidak memerlukan daemon Docker dan selanjutnya mengharuskan Docker diinstal. Alat seperti itu, berdasarkan proyek kontainer / penyimpanan dan kontainer / image, juga akan menghilangkan risiko keamanan dari soket daemon Docker yang terbuka selama pembuatan, yang mengkhawatirkan banyak pengguna.
 
 Catatan Buildah
